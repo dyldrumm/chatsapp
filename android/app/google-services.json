@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "60685004898",
+    "project_id": "chatsapp-chowda",
+    "storage_bucket": "chatsapp-chowda.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60685004898:android:659f02ae994c2d1cd6e13b",
+        "android_client_info": {
+          "package_name": "com.example.chatsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60685004898-at6a28m4a0p157ftmim4l95307jg21bk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chatsapp",
+            "certificate_hash": "1e8e86d0d00b83ce9c39a9ba62d5f3265abd5d54"
+          }
+        },
+        {
+          "client_id": "60685004898-c69vgo1r5btpsggj7h24f2v3tvvufnnd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUKBeHcXXH6u07uvFojIZ5ZXQnKZ3svyI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60685004898-c69vgo1r5btpsggj7h24f2v3tvvufnnd.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "60685004898-3ivdtavrfhqarrktmj3v661ov1gk7i57.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chatsapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
