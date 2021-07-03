@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'dart:developer';
 
 import '../models/contact.dart';
 import '../models/conversation.dart';
@@ -89,8 +90,10 @@ class DBService {
   }
 
   Stream<Contact> getUserData(String _userID) {
+    log("getUserData" + _userID);
     var _ref = _db.collection(_userCollection).doc(_userID);
     return _ref.get().asStream().map((_snapshot) {
+      log("getUserData contact: " + _snapshot.toString());
       return Contact.fromFirestore(_snapshot);
     });
   }
@@ -108,12 +111,15 @@ class DBService {
   }
 
   Stream<List<Contact>> getUsersInDB(String _searchName) {
+    log("getUsersInDB: " + _searchName);
     var _ref = _db
         .collection(_userCollection)
         .where("name", isGreaterThanOrEqualTo: _searchName)
         .where("name", isLessThan: _searchName + 'z');
     return _ref.snapshots().map((_snapshot) {
+      log("getUsersInDB snapshots len:" + _snapshot.docs.length.toString());
       return _snapshot.docs.map((_doc) {
+        log("getUsersInDB snapshots doc: " + _doc.toString());
         return Contact.fromFirestore(_doc);
       }).toList();
     });

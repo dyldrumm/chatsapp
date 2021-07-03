@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Contact {
@@ -17,6 +19,7 @@ class Contact {
   factory Contact.fromFirestore(DocumentSnapshot _snapshot) {
     // var _data = _snapshot.data();
     Map<String, dynamic> _data = _snapshot.data() as Map<String, dynamic>;
+    log("Contact data:" + _data.toString());
     return Contact(
       id: _snapshot.id,
       lastseen: _data["lastSeen"],

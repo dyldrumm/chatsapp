@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import 'package:provider/provider.dart';
@@ -38,6 +40,8 @@ class ProfilePage extends StatelessWidget {
           stream: DBService.instance.getUserData(_auth.user!.uid),
           builder: (_context, _snapshot) {
             var _userData = _snapshot.data;
+            log("in profilePageUI snapshot: " + _snapshot.toString());
+            log("in profilePageUI userData: " + _userData.toString());
             return _snapshot.hasData
                 ? Align(
                     alignment: Alignment.center,
